@@ -1,0 +1,12 @@
+dash
+dash-bootstrap-components
+pandas
+rapidfuzz
+Flask-Cors
+requests
+python-dotenv
+numpy
+plotly
+Flask-Caching
+waitress
+setuptools

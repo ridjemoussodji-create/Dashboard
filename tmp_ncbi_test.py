@@ -1,0 +1,10 @@
+from ncbi_fetcher import esearch, efetch_summary, search_and_fetch
+print('ESearch for BRCA1 (gene)')
+ids = esearch('BRCA1[Gene] AND human[Organism]', db='gene', retmax=5)
+print('IDs:', ids)
+print('Efetch summaries:')
+summ = efetch_summary(ids, db='gene')
+print(summ[:2])
+df = search_and_fetch('BRCA1[Gene] AND human[Organism]', db='gene', retmax=5)
+print('DF shape:', df.shape)
+print(df.head().to_dict())
